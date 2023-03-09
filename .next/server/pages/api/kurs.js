@@ -33,7 +33,7 @@ async function handler(req, res) {
             return res.json({
                 info: `${amount} ${from.toUpperCase()} to ${to.toUpperCase()}`,
                 kurs: getKurs($),
-                pesan: "Mantabbbbbbbbb"
+                pesan: "cuakkkkkkkkkkkk"
             });
         } catch (e) {
             // 5
