@@ -32,7 +32,8 @@ async function handler(req, res) {
             res.statusCode = 200;
             return res.json({
                 info: `${amount} ${from.toUpperCase()} to ${to.toUpperCase()}`,
-                kurs: getKurs($)
+                kurs: getKurs($),
+                pesan: "Mantabbbbbbbbb"
             });
         } catch (e) {
             // 5
@@ -47,6 +48,7 @@ const getKurs = ($)=>{
     const kurs = $(".result__BigRate-sc-1bsijpp-1").text();
     // return "Halooooooooooooooooo";
     return kurs.split(" ")[0].replace(",", "").split(".")[0];
+// fdsfsd
 };
 
 
