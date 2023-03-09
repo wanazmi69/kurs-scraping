@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/getu9153/public_html/kurs/
-    - /bin/cp -R .next $DEPLOYPATH
-    - /bin/cp -R src $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
