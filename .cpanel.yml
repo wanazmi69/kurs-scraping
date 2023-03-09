@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/getu9153/public_html/kurs/
+    - export DEPLOYPATH=/home/getu9153/repositories/kurs-scraping/
     - /bin/cp -R * $DEPLOYPATH
