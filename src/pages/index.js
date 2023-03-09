@@ -19,7 +19,7 @@ export default function Home() {
 			</Head>
 			<main className={styles.main}>
 				<p>Ambil Kurs Mata Uang</p>
-				<p>vx</p>
+				<p>vxgg</p>
 			</main>
 		</>
 	);
