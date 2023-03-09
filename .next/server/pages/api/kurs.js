@@ -45,7 +45,8 @@ async function handler(req, res) {
 }
 const getKurs = ($)=>{
     const kurs = $(".result__BigRate-sc-1bsijpp-1").text();
-    return kurs.split(" ")[0].replace(",", "").split(".")[0];
+    return "Halooooooooooooooooo";
+// return kurs.split(" ")[0].replace(",", "").split(".")[0];
 };
 
 
