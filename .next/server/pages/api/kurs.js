@@ -34,7 +34,7 @@ async function handler(req, res) {
             return res.json({
                 info: `${amount} ${from.toUpperCase()} to ${to.toUpperCase()}`,
                 kurs: getKurs($),
-                pesan: "ubah pesan lgi"
+                pesan: "sugoi"
             });
         } catch (e) {
             // 5
