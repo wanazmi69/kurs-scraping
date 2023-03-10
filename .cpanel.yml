@@ -1,6 +1,6 @@
 ---
 deployment:
    tasks:
-      - export DEPLOYPATH=/home/getu9153/public_html/edi/konversi-mata-uang/
+      - export DEPLOYPATH=/home/getu9153/public_html/budi/konversi-mata-uang/
       - /bin/cp -R * $DEPLOYPATH
       - /bin/cp -R .next $DEPLOYPATH
