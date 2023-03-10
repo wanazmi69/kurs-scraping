@@ -3,5 +3,3 @@ deployment:
    tasks:
       - export DEPLOYPATH=/home/getu9153/public_html/kurs/
       - /bin/cp -R * $DEPLOYPATH
-      run: npm install
-      run: npm run build
