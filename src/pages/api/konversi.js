@@ -4,7 +4,7 @@ export default async function handler(req, res) {
 	if (req.method === "GET") {
 		const { amount, from, to } = req.query;
 		try {
-			// /api/kurs?amount=1&from=usd&to=idr
+			// /api/konversi?amount=1&from=usd&to=idr
 			const response = await fetch(
 				`https://www.xe.com/currencyconverter/convert/?Amount=${amount}&From=${from.toUpperCase()}&To=${to.toUpperCase()}`
 			);
