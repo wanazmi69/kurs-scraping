@@ -3,3 +3,4 @@ deployment:
    tasks:
       - export DEPLOYPATH=/home/getu9153/public_html/kurs/
       - /bin/cp -R * $DEPLOYPATH
+      - /bin/cp -R .next $DEPLOYPATH

@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 			return res.json({
 				info: `${amount} ${from.toUpperCase()} to ${to.toUpperCase()}`,
 				kurs: getKurs($),
-				pesan: "usssssssssssssssssssssss",
+				pesan: "sugoi",
 			});
 		} catch (e) {
 			// 5
