@@ -1,10 +1,8 @@
 ---
 deployment:
-   steps:
-      script: |
-         npm run build
-      displayName: "npm build"
-      tasks:
-         - export DEPLOYPATH=/home/getu9153/public_html/kurs/
-         - /bin/cp -R .next $DEPLOYPATH
+   - steps:
+        - script: npm run build
+        - tasks:
+             - export DEPLOYPATH=/home/getu9153/public_html/kurs/
+             - /bin/cp -R .next $DEPLOYPATH
 # ff
