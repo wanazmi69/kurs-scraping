@@ -18,8 +18,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<p>Ambil Kurs Mata Uang Mantab</p>
-				<p>ubah teks lagi ubah lgi</p>
+				<p>APIKurs Mata Uang</p>
 			</main>
 		</>
 	);
