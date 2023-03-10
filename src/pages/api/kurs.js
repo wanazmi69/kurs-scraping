@@ -27,6 +27,10 @@ export default async function handler(req, res) {
 }
 
 const getKurs = ($) => {
+	// 13342.34503403
+
 	const kurs = $(".result__BigRate-sc-1bsijpp-1").text();
-	return kurs.split(" ")[0].replace(",", "").split(".")[0];
+	return kurs.split(" ")[0]; // 13,342.34503403
+	// return kurs.split(" ")[0].replace(",", "") 					// 13342.34503403
+	// return kurs.split(" ")[0].replace(",", "").split(".")[0]; 	// 13342
 };
