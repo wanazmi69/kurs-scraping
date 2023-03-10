@@ -14,7 +14,11 @@ export default async function handler(req, res) {
 			res.statusCode = 200;
 			return res.json({
 				info: `${amount} ${from.toUpperCase()} to ${to.toUpperCase()}`,
-				kurs: getKurs($),
+				kurs1: getKurs($, "kurs1"),
+				kurs2: getKurs($, "kurs2"),
+				kurs3: getKurs($, "kurs3"),
+				kurs4: getKurs($, "kurs4"),
+				kurs5: getKurs($, "kurs5"),
 			});
 		} catch (e) {
 			// 5
@@ -26,11 +30,31 @@ export default async function handler(req, res) {
 	}
 }
 
-const getKurs = ($) => {
-	// 13342.34503403
+const getKurs = ($, code) => {
+	// "13,342.34503403";
+	// 13342.34503403;
+	// 13342;
 
+	// ("13,342.34503403");
+	// ("13342.34503403");
+	// ("13342");
 	const kurs = $(".result__BigRate-sc-1bsijpp-1").text();
-	return kurs.split(" ")[0]; // 13,342.34503403
-	// return kurs.split(" ")[0].replace(",", "") 					// 13342.34503403
-	// return kurs.split(" ")[0].replace(",", "").split(".")[0]; 	// 13342
+	switch (code) {
+		case "kurs1":
+			return kurs.split(" ")[0];
+		case "kurs2":
+			return kurs.split(" ")[0].replace(",", "");
+		case "kurs3":
+			return kurs.split(" ")[0].replace(",", "").split(".")[0];
+		case "kurs4":
+			return parseFloat(kurs.split(" ")[0].replace(",", ""));
+		case "kurs5":
+			return parseInt(kurs.split(" ")[0].replace(",", "").split(".")[0]);
+
+		default:
+			break;
+	}
+
+	// return parseInt(kurs.split(" ")[0].replace(",", "")); // 13342.34503403
+	// return kurs.split(" ")[0].replace(",", "").split(".")[0]; // 13342
 };
