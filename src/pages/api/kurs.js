@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 			return res.json({
 				info: `${amount} ${from.toUpperCase()} to ${to.toUpperCase()}`,
 				kurs: getKurs($),
-				pesan: "sugoi",
+				pesan: "berhasil",
 			});
 		} catch (e) {
 			// 5
@@ -31,7 +31,5 @@ export default async function handler(req, res) {
 
 const getKurs = ($) => {
 	const kurs = $(".result__BigRate-sc-1bsijpp-1").text();
-	// return "Halooooooooooooooooo";
 	return kurs.split(" ")[0].replace(",", "").split(".")[0];
-	// fdsfsd
 };
